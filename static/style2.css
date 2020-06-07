@@ -1,0 +1,101 @@
+body, html {
+  background-image: url("home.jpg");
+  height: 100%;
+  font-family: cursive;
+}
+
+.message2, .message1 {
+  font-size: 20px;
+  margin-top: 40px;
+}
+
+.message1 {
+  text-align: center;
+  color: red;
+}
+
+.message2 {
+  text-align: left;
+  color: black;
+  font-style: bold;
+  margin-bottom: 20px;
+}
+
+header {
+  text-align: center;
+  color: white;
+  font-size: 28px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: black;
+}
+
+nav {
+  text-align: right;
+  margin-right: 10px;
+}
+nav a {
+  color: black;
+  margin-right: 10px;
+}
+
+h3 {
+  text-align: left;
+  color: black;
+}
+
+h3:hover {
+  color: blue;
+}
+
+.form-row {
+  width: 100%;
+}
+
+td a {
+  color: black;
+}
+td a:hover {
+  color: yellow;
+}
+td th {
+  text-align: center;
+}
+td tr {
+  text-align: center;
+}
+
+.rating {
+  color: red;
+  font-size: 20px;
+}
+
+.review {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+.review .review-username {
+  font-size: 16px;
+  font-weight: bold;
+}
+.review .review-review {
+  font-size: 18px;
+  text-align: left;
+}
+
+.label {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.row {
+  text-align: center;
+}
+
+.goodread {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/*# sourceMappingURL=style2.css.map */

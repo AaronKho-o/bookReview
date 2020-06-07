@@ -1,0 +1,19 @@
+{% extends "layout1.html" %}
+
+{% block title %}
+    Error
+{% endblock %}
+
+{% block outside %}
+<header>
+    Error
+</header>
+    <nav>
+        <a href="{{ url_for('logout') }}">Logout</a>
+        <a href = "{{ url_for('home') }}">Home</a>
+    </nav>
+{% endblock %}
+
+{% block body %}
+    <h1>No such book exists.</h1>
+{% endblock %}

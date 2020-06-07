@@ -1,0 +1,64 @@
+{% extends "layout2.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block outside %}
+    <header>
+        Home Page
+    </header>
+    <nav>
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href = "{{ url_for('logout') }}">Logout</a>
+    </nav>
+{% endblock %}
+
+{% block body %}
+    <h3>Search for a book</h3>
+    <form action="{{ url_for('search') }}" method="POST">
+        <div class = "form-row">
+            <div class ="col">
+                <div class="form-group">
+                    <select class="form-control" name="book_col">
+                        <option value="isbn">ISBN</option>
+                        <option value="author">AUTHOR</option>
+                        <option value="title">TITLE</option>
+                    </select>
+                </div>
+            </div>
+                <div class = "col">
+                <div class="form-group">
+                    <input class = "form-control" name = "key_words" placeholder="Search bar">
+                </div>
+            </div>
+                <div class = "col">
+                <div class="form-group">
+                    <button class="btn btn-primary">Search</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div class = "message1">{{message}}</div>
+
+    <table class="table table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">{{col_names[0]}}</th><th scope="col">{{col_names[1]}}</th><th scope="col">{{col_names[2]}}</th><th scope="col">{{col_names[3]}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for book in results %}
+            <tr>
+              <td><a href="{{ url_for('bookdetails', isbn=book.isbn) }}">{{book.isbn}}</a></td>
+              <td><a href="{{ url_for('bookdetails', isbn=book.isbn) }}">{{book.title}}</a></td>
+              <td><a href="{{ url_for('bookdetails', isbn=book.isbn) }}">{{book.author}}</a></td>
+              <td><a href="{{ url_for('bookdetails', isbn=book.isbn) }}">{{book.year}}</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock %}
